@@ -132,7 +132,11 @@ The below explains why each two methods can prevent overfitting.
 - Drop out(p = 0.7)
   - Dropout prevents the corresponding parameter from being updated at that point by making certain parameters zero with the probability of p. That is, the number of times parameters are updated is reduced in probability, preventing overfitting.
 
+#### 3. Comparison of MLP and CNN
 
+<center><img src="/Figure/comparison.png" width="50%" height="50%"></center>
+
+For reasonable comparison, I tried to make numbers of total trainable parameters of both model same. The CNN model has 2,003,754 parameters and the MLP model has 2,005,610 parameters. Although the number of parameters are similar, the accuracy on test images of the CNN and MLP are 91.48% and 80.54%, respectively. I think the reason why the accuracy gap exists is affect of locality. The CNN model can consider locality information of input images. In the other hands, the MLP model can’t refer their locality information because they make input images flatten immediately when they come in the model. That is reason why CNN is powerful than MLP in image task.
 
 # ETC
 For educational purpose only. This software cannot be used for any re-distribution with or without modification. The lecture notebook files are copied or modified from the material of Siamak Ravanbakhsh. 
