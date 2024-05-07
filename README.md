@@ -81,8 +81,8 @@ In this problem, you will compare a CNN model with MLP and analyze the performan
 
 Compare the validation accuracies of two models:
 
-• A CNN model with MaxPooling layers from Problem 2.1 in this assignment. 
-• An MLP model with ReLU layers (you can modify as you want).
+- A CNN model with MaxPooling layers from Problem 2.1 in this assignment. 
+- An MLP model with ReLU layers (you can modify as you want).
 
 In your report,
 ```
@@ -127,10 +127,10 @@ I used two methods(weight decay and dropout) to prevent overfitting. As we can s
 
 The below explains why each two methods can prevent overfitting.
 - Weight decay(1e-5)
-  By using Weight decay to set the lower bound of loss value, parameters can be prevented from being excessively      updated (i.e., overfitting).
+  - By using Weight decay to set the lower bound of loss value, parameters can be prevented from being excessively      updated (i.e., overfitting).
 
 - Drop out(p = 0.7)
-  Dropout prevents the corresponding parameter from being updated at that point by making certain parameters zero with the probability of p. That is, the number of times parameters are updated is reduced in probability, preventing overfitting.
+  - Dropout prevents the corresponding parameter from being updated at that point by making certain parameters zero with the probability of p. That is, the number of times parameters are updated is reduced in probability, preventing overfitting.
 
 
 
