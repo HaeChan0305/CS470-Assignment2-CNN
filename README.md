@@ -62,10 +62,10 @@ In your report,
 #### 2.2. Prevention of Overfitting
 <b>Overfitting</b> happens when your model fits too well to the training set. It then becomes difficult for the model to generalize to new examples that were not in the training set. For example, your model recognizes specific images in your training set instead of general patterns. Your training accuracy will be higher than the accuracy on the validation/test set. To reduce overfitting, you must implement techniques such as followings (but are not limited to) to the CNN model in Problem 2.1:
 
-• Batch Normalization
-• Dropout
-• Data Augmentation
-• other methods or tricks
+- Batch Normalization
+- Dropout
+- Data Augmentation
+- other methods or tricks
 
 You can decide to set the parameters for the regularizations (e.g. dropout rate).
 
