@@ -18,7 +18,7 @@
 ## Assignment 2
 ### Problem 1: Convolution operations using NumPy
 In this problem, you will implement convolution and average pooling functions using [NumPy](https://numpy.org/). You will then analyze the result on the MNIST dataset for a handwriting digit classification task. You will also compare the result with that using [Pytorch](https://pytorch.org/). You can now use the PyTorch library for network design and construction.
-You have to fill your code in the blank section following the “PLACE YOUR CODE HERE” comments in the CNN problem 1.ipynb file.
+You have to fill your code in the blank section following the “PLACE YOUR CODE HERE” comments in the <b>CNN_problem_1.ipynb</b> file.
 
 #### Convolution and Average Pooling using NumPy
 Implement two simple forward networks as follows:
