@@ -25,9 +25,8 @@ Implement two simple forward networks as follows:
 
 <img src="/Figure/CNN_architecture.png" width="50%" height="50%">
 
-
-```
 In your report,
+```
 • attach the visualization results and
 • write down your analysis stating the difference between results (Max. 600 characters). 
 Note that you must obtain 6 different visualizations.
@@ -53,6 +52,13 @@ You must implement a CNN model under the CNN Max() class. The model has a sequen
 where the convolution layer is with bias=True, which needs to be accounted for calculating the number of parameters.
 All other arguments use default values. You will also implement forward and backward passes to optimize CNN by using stochastic gradient descent (SGD) with a momentum method. Note that your test accuracy should be over 90.2% on the test images.
 
+In your report,
+```
+• analyze the number of parameters used in each layer and the total number of parameters over the entire model considering the input image size,
+• attach the graph of training and validation accuracies over 30 epochs,
+• attach the capture of the test accuracy on the 10, 000 test images from the ipynb screen.
+```
+
 #### 2.2. Prevention of Overfitting
 <b>Overfitting</b> happens when your model fits too well to the training set. It then becomes difficult for the model to generalize to new examples that were not in the training set. For example, your model recognizes specific images in your training set instead of general patterns. Your training accuracy will be higher than the accuracy on the validation/test set. To reduce overfitting, you must implement techniques such as followings (but are not limited to) to the CNN model in Problem 2.1:
 
@@ -63,6 +69,13 @@ All other arguments use default values. You will also implement forward and back
 
 You can decide to set the parameters for the regularizations (e.g. dropout rate).
 
+In your report,
+```
+• attach a graph of training-and-validation accuracies over 30 epochs with a selected technique that handles overfitting,
+• report the test accuracy on the 10, 000 test images,
+• compare the results of the CNN model without regularization methods (analyze and explain why the selected technique works for preventing overfitting).
+```
+
 ### Problem 3: Comparison of MLP and CNN
 In this problem, you will compare a CNN model with MLP and analyze the performance difference by computing validation accuracies given the Fashion MNIST image dataset. You have to modify the code in the CNN_problem_3.ipynb file.
 
@@ -70,6 +83,13 @@ Compare the validation accuracies of two models:
 
 • A CNN model with MaxPooling layers from Problem 2.1 in this assignment. 
 • An MLP model with ReLU layers (you can modify as you want).
+
+In your report,
+```
+• attach a plot of validation accuracy curves from the two models where the x axis and y axis are the number of training epochs (which is 30) and accuracy, respectively,
+• analyze the results (e.g., why does one model perform better than the other?) within one paragraph.
+```
+
 
 ### Results
 - Visualization
