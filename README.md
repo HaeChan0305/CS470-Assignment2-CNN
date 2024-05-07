@@ -25,8 +25,9 @@ Implement two simple forward networks as follows:
 
 <img src="/Figure/CNN_architecture.png" width="50%" height="50%">
 
-In your report,
+
 ```
+In your report,
 • attach the visualization results and
 • write down your analysis stating the difference between results (Max. 600 characters). 
 Note that you must obtain 6 different visualizations.
