@@ -110,13 +110,13 @@ I define the error between two kinds of methods as euclidean distance between tw
 
 #### 2.1 A CNN with MaxPooling layers
 Let the input image size as (1, 28, 28).
-  (Layer 1) Conv2d-1 (32, 3, 3) → 32 * 3 * 3 + 32 = 320 parameters
-  (Layer 3) Conv2d-2 (64, 3, 3) → 64 * 32 * 3 * 3 + 64 = 18,496 parameters
-  (Layer 6) Linear-1 (64, 30976) → 64 * 30976 + 64 = 1,982,528 parameters (Layer 7) Linear-2 (32, 64) → 32 * 64 + 32 = 2,080 parameters
-  (Layer 8) Linear-3 (10, 32) → 10 * 32 + 10 = 330 parameters
+- (Layer 1) Conv2d-1 (32, 3, 3) → 32 * 3 * 3 + 32 = 320 parameters
+- (Layer 3) Conv2d-2 (64, 3, 3) → 64 * 32 * 3 * 3 + 64 = 18,496 parameters
+- (Layer 6) Linear-1 (64, 30976) → 64 * 30976 + 64 = 1,982,528 parameters (Layer 7) Linear-2 (32, 64) → 32 * 64 + 32 = 2,080 parameters
+- (Layer 8) Linear-3 (10, 32) → 10 * 32 + 10 = 330 parameters
 Number of total parameters is 2,003,754.
 
-<center><img src="/Figure/training_history" width="50%" height="50%"></center>
+<center><img src="/Figure/training_history.png" width="50%" height="50%"></center>
 
 
 # ETC
