@@ -20,13 +20,17 @@
 In this problem, you will implement convolution and average pooling functions using [NumPy](https://numpy.org/). You will then analyze the result on the MNIST dataset for a handwriting digit classification task. You will also compare the result with that using [Pytorch](https://pytorch.org/). You can now use the PyTorch library for network design and construction.
 You have to fill your code in the blank section following the “PLACE YOUR CODE HERE” comments in the <b>CNN_problem_1.ipynb</b> file.
 
-#### Convolution and Average Pooling using NumPy
+#### 1.1 Convolution and Average Pooling using NumPy
 Implement two simple forward networks as follows:
 
 <img src="/Figure/CNN_architecture.png" width="50%" height="50%">
 
-### TASK 2: Train a model
-To train our model, we will use a Stochastic Gradient Descent(SGD) method with momentum. In addition, we will adjust the learning rate with an exponential learning rate schedule as optimization proceeds; after each epoch, we will reduce the learning rate by multiplying it by a decay rate.
+#### 1.2 Convolution and Average Pooling using PyTorch
+Implement the above CNN models using PyTorch.
+
+
+### Problem 2: Convolutional Neural Networks (CNN)
+In this part, implement a convolutional neural network (CNN) on the <b>FashionMNIST</b> dataset for an image classification task. You can now use the [PyTorch](https://pytorch.org/) library for network design and construction. You have to fill your code in the blank section following the “PLACE YOUR CODE HERE” comments in the CNN_problem_2.ipynb file.
 
 ### TASK 3: Visualization
 You have to plot the loss function and the accuracies on the training and validation sets. Then, visualize the weights that were learned in the first layer of the network. The weights of the intermediate layer may learn to represent specific features of the inputs, such as their curvature, thickness, or orientation.
