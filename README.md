@@ -23,7 +23,7 @@ You have to fill your code in the blank section following the “PLACE YOUR CODE
 #### Convolution and Average Pooling using NumPy
 Implement two simple forward networks as follows:
 
-<center><img src="/Figure/CNN_architecture" width="50%" height="50%"></center>
+<img src="/Figure/CNN_architecture" width="50%" height="50%">
 
 ### TASK 2: Train a model
 To train our model, we will use a Stochastic Gradient Descent(SGD) method with momentum. In addition, we will adjust the learning rate with an exponential learning rate schedule as optimization proceeds; after each epoch, we will reduce the learning rate by multiplying it by a decay rate.
