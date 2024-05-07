@@ -112,11 +112,26 @@ I define the error between two kinds of methods as euclidean distance between tw
 Let the input image size as (1, 28, 28).
 - (Layer 1) Conv2d-1 (32, 3, 3) → 32 * 3 * 3 + 32 = 320 parameters
 - (Layer 3) Conv2d-2 (64, 3, 3) → 64 * 32 * 3 * 3 + 64 = 18,496 parameters
-- (Layer 6) Linear-1 (64, 30976) → 64 * 30976 + 64 = 1,982,528 parameters (Layer 7) Linear-2 (32, 64) → 32 * 64 + 32 = 2,080 parameters
+- (Layer 6) Linear-1 (64, 30976) → 64 * 30976 + 64 = 1,982,528 parameters
+- (Layer 7) Linear-2 (32, 64) → 32 * 64 + 32 = 2,080 parameters
 - (Layer 8) Linear-3 (10, 32) → 10 * 32 + 10 = 330 parameters
 Number of total parameters is 2,003,754.
 
 <center><img src="/Figure/training_history.png" width="50%" height="50%"></center>
+
+#### 2.2 Prevention of Overfitting
+
+<center><img src="/Figure/training_history2.png" width="50%" height="50%"></center>
+
+I used two methods(weight decay and dropout) to prevent overfitting. As we can see from training-validation accuracies and loss graph, the gap of accuracies and loss between training and validation with two methods is less than the gap without them. Also, the accuracy on the test images is quite increased.
+
+The below explains why each two methods can prevent overfitting.
+- Weight decay(1e-5)
+  By using Weight decay to set the lower bound of loss value, parameters can be prevented from being excessively      updated (i.e., overfitting).
+
+- Drop out(p = 0.7)
+  Dropout prevents the corresponding parameter from being updated at that point by making certain parameters zero with the probability of p. That is, the number of times parameters are updated is reduced in probability, preventing overfitting.
+
 
 
 # ETC
