@@ -20,20 +20,55 @@
 In this problem, you will implement convolution and average pooling functions using [NumPy](https://numpy.org/). You will then analyze the result on the MNIST dataset for a handwriting digit classification task. You will also compare the result with that using [Pytorch](https://pytorch.org/). You can now use the PyTorch library for network design and construction.
 You have to fill your code in the blank section following the “PLACE YOUR CODE HERE” comments in the <b>CNN_problem_1.ipynb</b> file.
 
-#### 1.1 Convolution and Average Pooling using NumPy
+#### 1.1. Convolution and Average Pooling using NumPy
 Implement two simple forward networks as follows:
 
 <img src="/Figure/CNN_architecture.png" width="50%" height="50%">
 
-#### 1.2 Convolution and Average Pooling using PyTorch
+In your report,
+```
+• attach the visualization results and
+• write down your analysis stating the difference between results (Max. 600 characters). 
+Note that you must obtain 6 different visualizations.
+```
+
+#### 1.2. Convolution and Average Pooling using PyTorch
 Implement the above CNN models using PyTorch.
 
+In your report,
+```
+• attach the visualization results and
+• provide whether your implementation using NumPy is the same as that using PyTorch by cal- culating any errors.
+```
 
 ### Problem 2: Convolutional Neural Networks (CNN)
 In this part, implement a convolutional neural network (CNN) on the <b>FashionMNIST</b> dataset for an image classification task. You can now use the [PyTorch](https://pytorch.org/) library for network design and construction. You have to fill your code in the blank section following the “PLACE YOUR CODE HERE” comments in the CNN_problem_2.ipynb file.
 
-### TASK 3: Visualization
-You have to plot the loss function and the accuracies on the training and validation sets. Then, visualize the weights that were learned in the first layer of the network. The weights of the intermediate layer may learn to represent specific features of the inputs, such as their curvature, thickness, or orientation.
+#### 2.1. A CNN with MaxPooling layers
+You must implement a CNN model under the CNN Max() class. The model has a sequential structure:
+
+<img src="/Figure/CNN_structure.png" width="50%" height="50%">
+
+where the convolution layer is with bias=True, which needs to be accounted for calculating the number of parameters.
+All other arguments use default values. You will also implement forward and backward passes to optimize CNN by using stochastic gradient descent (SGD) with a momentum method. Note that your test accuracy should be over 90.2% on the test images.
+
+#### 2.2. Prevention of Overfitting
+<b>Overfitting</b> happens when your model fits too well to the training set. It then becomes difficult for the model to generalize to new examples that were not in the training set. For example, your model recognizes specific images in your training set instead of general patterns. Your training accuracy will be higher than the accuracy on the validation/test set. To reduce overfitting, you must implement techniques such as followings (but are not limited to) to the CNN model in Problem 2.1:
+
+• Batch Normalization
+• Dropout
+• Data Augmentation
+• other methods or tricks
+
+You can decide to set the parameters for the regularizations (e.g. dropout rate).
+
+### Problem 3: Comparison of MLP and CNN
+In this problem, you will compare a CNN model with MLP and analyze the performance difference by computing validation accuracies given the Fashion MNIST image dataset. You have to modify the code in the CNN_problem_3.ipynb file.
+
+Compare the validation accuracies of two models:
+
+• A CNN model with MaxPooling layers from Problem 2.1 in this assignment. 
+• An MLP model with ReLU layers (you can modify as you want).
 
 ### Results
 - Visualization
