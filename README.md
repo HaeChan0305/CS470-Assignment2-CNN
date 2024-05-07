@@ -92,54 +92,32 @@ In your report,
 
 
 ### Results
-- Visualization
+#### 1.1 Convolution and Average Pooling using NumPy
+As same reason, results of Filter 2 (takes other values on vertical line) and Filter 3(takes other values on other diagonal) look spread in vertical and reverse diagonal direction respectively.
+In case of Average Pooling, it makes 4 parameters to 1 parameter by averaging them. That means the image information is compressed and also lost. That is reason why the results look more blurry.
+
+<center><img src="/Figure/visualization1.png" width="50%" height="50%"></center>
+
+<center><img src="/Figure/visualization2.png" width="50%" height="50%"></center>
+
   
-  <center><img src="/Figure/visualization.png" width="50%" height="50%"></center>
-  
-- Loss and accuracy Plot
-  - ReLU
+#### 1.2 Convolution and Average Pooling using PyTorch
+I define the error between two kinds of methods as euclidean distance between two results. The euclidean distance between numpy output and pytorch output by each example and each filter can be shown below. we can know that both are almost same.
 
-    <center><img src="/Figure/loss_ReLU.png" width="50%" height="50%"></center>
-    
-    <center><img src="/Figure/accuracy_ReLU.png" width="50%" height="50%"></center>
+<center><img src="/Figure/visualization3.png" width="50%" height="50%"></center>
 
-  - Leaky ReLU
+<center><img src="/Figure/distance.png" width="50%" height="50%"></center>
 
-    <center><img src="/Figure/Leaky_ReLU.png" width="50%" height="50%"></center>
+#### 2.1 A CNN with MaxPooling layers
+Let the input image size as (1, 28, 28).
+  (Layer 1) Conv2d-1 (32, 3, 3) → 32 * 3 * 3 + 32 = 320 parameters
+  (Layer 3) Conv2d-2 (64, 3, 3) → 64 * 32 * 3 * 3 + 64 = 18,496 parameters
+  (Layer 6) Linear-1 (64, 30976) → 64 * 30976 + 64 = 1,982,528 parameters (Layer 7) Linear-2 (32, 64) → 32 * 64 + 32 = 2,080 parameters
+  (Layer 8) Linear-3 (10, 32) → 10 * 32 + 10 = 330 parameters
+Number of total parameters is 2,003,754.
 
-  - SWISH
+<center><img src="/Figure/training_history" width="50%" height="50%"></center>
 
-    <center><img src="/Figure/SWISH.png" width="50%" height="50%"></center>
-
-  - SELU
-
-    <center><img src="/Figure/SELU.png" width="50%" height="50%"></center>
-
-- Loss and accuracy by activation functions on 2000 iteration.
-
-| Activation Function | ReLU | Leaky ReLU | SWISH | SELU |
-|---|---|---|---|---|
-| **Loss** | 1.49 | 1.50 | 1.51 | 1.54 |
-| **Accuracy** | 0.470  | 0.469 | 0.472 | 0.462 |
-
-
-<!--
-# Tutorial Links
-- [Tutorial 1-1](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_1/cs470_tutorial_1_1.ipynb)
-- [Tutorial 1-2](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_1/cs470_tutorial_1_2.ipynb)
-- [Tutorial 1-3](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_1/cs470_tutorial_1_3.ipynb)
-- [Tutorial 2](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_2/RL_tutorial.ipynb)
-- [Tutorial 3](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_3/README.md)
-
-
-# Quiz
-- [Quiz 1](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_1/MLP_tutorial_quiz_problem.ipynb)
-- [Quiz 2](https://github.com/pidipidi/CS470_IAI_2023_Spring/blob/main/tutorial_1/tutorial2_quiz.ipynb)
-
-
-# Installation
-- [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation.html)
--->
 
 # ETC
 For educational purpose only. This software cannot be used for any re-distribution with or without modification. The lecture notebook files are copied or modified from the material of Siamak Ravanbakhsh. 
